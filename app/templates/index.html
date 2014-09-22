@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tonic</title>
+    <style type="text/css">
+        body {
+            background-color: black;
+        }
+        #bg {
+            background: url({{ imageUrl }}) no-repeat center center fixed; 
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/foggy.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#bg').foggy({
+                blurRadius: 10,
+                opacity: 0.8
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="bg">
+        <p>Hello</p>
+    </div>
+</body>
+</html>
