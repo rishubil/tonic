@@ -1,0 +1,26 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+    background-color: black;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div, p, span {
+    font-family: 'Nanum Gothic', serif;
+    color: white;
+    text-shadow: 1px 1px 15px #000;
+	font: bold;
+}
+
+.weather-description {
+    font-size: 4em;
+    text-align: right;
+    margin-right: 1em;
+}

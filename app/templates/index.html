@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Tonic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}?v=1">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/foggy.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     <style type="text/css">
-        body {
-            background-color: black;
-        }
         #bg {
             background: url({{ imageUrl }}) no-repeat center center fixed; 
             width: 100%;
@@ -20,20 +21,11 @@
             background-size: cover;
         }
     </style>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='js/foggy.js') }}"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#bg').foggy({
-                blurRadius: 10,
-                opacity: 0.8
-            });
-        });
-    </script>
 </head>
 <body>
-    <div id="bg">
-        <p>Hello</p>
+    <div id="bg"></div>
+    <div id="main">
+        <p class="weather-description">{{ description }}</p>
     </div>
 </body>
 </html>
