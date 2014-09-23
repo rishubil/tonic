@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Tonic</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}?v=1">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/foggy.js') }}"></script>
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
@@ -26,6 +28,12 @@
     <div id="bg"></div>
     <div id="main">
         <p class="weather-description">{{ description }}</p>
+        <p class="weather-info">temp: {{ temp }}&#8451;,  humidity: {{ humidity }}%</p>
+        <form id="search-form" action="https://www.google.co.kr/search?qscrl=1" method="get">
+            <input id="search-input" type="text" name="q"/>
+            <input id="search-button" type="submit" value="&#xf002;"/>
+        </form>
+        <div class="clearboth"></div>
     </div>
 </body>
 </html>

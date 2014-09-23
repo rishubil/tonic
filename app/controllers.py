@@ -46,8 +46,10 @@ def index():
     # print str(weather)
     if weather:
         description = weather[u'weather'][0][u'description']
+        temp = weather[u'main'][u'temp']
+        humidity = weather[u'main'][u'humidity']
         imageUrl = getPhoto(description)
         return render_template('index.html', imageUrl=imageUrl, \
-            description=description)
+            description=description, temp=temp, humidity=humidity)
     else:
         return "no weather"
