@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request
 from app import app, flickr
 import xml.etree.ElementTree as ET
 import random
@@ -28,8 +28,8 @@ def getPhoto(search_text):
         print "Unexpected error: " + str(e)
         return "http://"
         
-def getWeather():
-    weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=Seoul' + \
+def getWeather(city):
+    weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + \
         '&units=metric'
     request = Request(weatherUrl)
     try:
@@ -40,9 +40,9 @@ def getWeather():
         print "Unexpected error: " + str(e)
         return None
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
-    weather = getWeather()
+    weather = getWeather(request.args.get('city', 'seoul'))
     # print str(weather)
     if weather:
         description = weather[u'weather'][0][u'description']
