@@ -11,7 +11,7 @@
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
     <style type="text/css">
         #bg {
-            background: url({{ imageUrl }}) no-repeat center center fixed; 
+            background: url({{ photo['imageUrl'] }}) no-repeat center center fixed; 
             width: 100%;
             height: 100%;
             position: absolute;
@@ -27,13 +27,16 @@
 <body>
     <div id="bg"></div>
     <div id="main">
-        <p class="weather-description">{{ description }}</p>
-        <p class="weather-info">temp: {{ temp }}&#8451;,  humidity: {{ humidity }}%</p>
+        <p class="weather-description">{{ weather['description'] }}</p>
+        <p class="weather-info">temp: {{ weather['temp'] }}&#8451;,  humidity: {{ weather['humidity'] }}%</p>
         <form id="search-form" action="https://www.google.co.kr/search?qscrl=1" method="get">
             <input id="search-input" type="text" name="q"/>
             <input id="search-button" type="submit" value="&#xf002;"/>
         </form>
         <div class="clearboth"></div>
+    </div>
+    <div id="license">
+        <p class="license-text">Copyright <i class="fa fa-copyright"></i> by <a href="{{ photo['authorUrl'] }}">{{ photo['author'] }}</a>, <i class="fa fa-flickr"></i> Flickr<br />{{ photo['license']['name'] }}</i></p>
     </div>
 </body>
 </html>

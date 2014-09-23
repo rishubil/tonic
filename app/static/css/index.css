@@ -11,6 +11,26 @@ body {
     margin: 48px;
 }
 
+#license {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 48px;
+}
+
+.license-text {
+    font-size: 0.3em;
+    margin: 0px;
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+.license-text > a {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
 div, p, span {
     font-family: 'Raleway', sans-serif;
     color: white;
