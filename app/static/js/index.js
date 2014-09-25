@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#bg').foggy({
-        blurRadius: 10,
+        blurRadius: 5,
         opacity: 0.8
     });
     var $button = $('#search-input');
