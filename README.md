@@ -5,7 +5,7 @@ Tonic
  Tonic is a simple example site that provide current weather of each cities and randomly chosen photos.
 
 ##Running demo
-<https://tonic-c9-rishubil.c9.io/?city=seoul>
+<http://kb.update.sh/tonic?city=seoul>
 
  
 ##Set city
@@ -13,10 +13,10 @@ You can set the city to get current weather by changing value of 'city' paramete
 
 - examples 
 
-> <https://tonic-c9-rishubil.c9.io/?city=seoul>  
-> <https://tonic-c9-rishubil.c9.io/?city=pusan>  
-> <https://tonic-c9-rishubil.c9.io/?city=London,ca>  
-> <https://tonic-c9-rishubil.c9.io/?city=London,uk>  
+> <http://kb.update.sh/tonic?city=seoul>  
+> <http://kb.update.sh/tonic?city=pusan>  
+> <http://kb.update.sh/tonic?city=London,ca>  
+> <http://kb.update.sh/tonic?city=London,uk>  
 
 ##License
     Copyright 2014 Nesswit
